@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1529"><meta name="description" content="QOLDAN — Knowledge that works in real life. Learn science through interactive missions and scientific reasoning.">
+<title>QOLDAN — Knowledge in action</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="header">
+    <button type="button" class="brand nav-btn" data-nav="home" aria-label="Go to QOLDAN home"><span class="brand-q">Q</span>OLDAN<span class="brand-dot">.</span></button>
+    <div class="header-right"><span class="version-pill">BETA v0.3</span><span class="header-status"><i></i> Physics lab</span><button type="button" class="icon-button" data-action="reset" title="Reset learning session" aria-label="Reset learning session">↺</button></div>
+  </header>
+  <nav id="progress" class="progress" aria-label="Mission progress"></nav>
+  <main id="app" class="main" aria-live="polite"></main>
+  <footer class="footer"><span>QOLDAN · Knowledge in action</span><span>Educational simulation · Anonymous local progress · <button type="button" class="footer-button" data-action="privacy">Privacy</button></span></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>

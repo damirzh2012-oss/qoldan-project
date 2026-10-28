@@ -1,0 +1,15 @@
+# QOLDAN 0.3 — Netlify config; no npm or framework required.
+# Keep this file at the TOP LEVEL of the GitHub repository.
+[build]
+  command = "mkdir -p dist && if [ -f index.html ]; then cp index.html styles.css app.js qoldan-logo.webp favicon.svg dist/; elif [ -f site/index.html ]; then cp -R site/. dist/; else echo 'ERROR: index.html missing from the repository root or site/' >&2; exit 1; fi"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
